@@ -1,0 +1,176 @@
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #ddd;
+  width: 100%; /* Full width */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.top-bar-title {
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.create-todo-btn {
+  position: absolute; 
+  top: 1%;
+  left: 50%; 
+  transform: translateX(-50%);
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Modal Styling */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-form h2 {
+  margin-bottom: 15px;
+}
+
+.modal-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.modal-form input, .modal-form textarea, .modal-form select {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.modal-form .button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.modal-form .create-btn {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-form .cancel-btn {
+  background-color: gray;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Todo Styling */
+.todo {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+}
+
+.todo .button-group {
+  margin-top: 10px;
+}
+
+.todo .edit-btn, .todo .delete-btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.todo .edit-btn {
+  margin-right: 10px;
+  background-color: lightblue;
+}
+
+.todo .delete-btn {
+  background-color: red;
+  color: white;
+}
+
+form textarea {
+  resize: none; /* Disable resizing */
+  height: 150px; /* Increase the height */
+  width: 100%; /* Ensure it spans the full width */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.completion-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: green;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  animation: fadeOut 3s forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.complete-btn {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+ 
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.complete-btn:hover {
+  background-color: darkgreen; /* Optional hover effect */
+}
